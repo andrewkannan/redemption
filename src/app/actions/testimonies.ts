@@ -40,3 +40,16 @@ export async function createTestimony(formData: FormData) {
     return { success: false, error: "Failed to submit testimony" };
   }
 }
+
+export async function deleteTestimony(id: string) {
+  try {
+    await prisma.testimony.delete({
+      where: { id },
+    });
+    revalidatePath("/");
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to delete testimony:", error);
+    return { success: false, error: "Failed to delete testimony" };
+  }
+}

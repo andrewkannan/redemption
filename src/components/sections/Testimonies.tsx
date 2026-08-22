@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquarePlus, X } from "lucide-react";
+import { MessageSquarePlus, X, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { createTestimony } from "@/app/actions/testimonies";
+import { createTestimony, deleteTestimony } from "@/app/actions/testimonies";
 
 type Testimony = {
   id: string;
@@ -17,6 +17,24 @@ type Testimony = {
 export function Testimonies({ initialTestimonies }: { initialTestimonies: Testimony[] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const clickCount = useRef(0);
+
+  function handleTitleClick() {
+    clickCount.current += 1;
+    if (clickCount.current >= 5) {
+      setIsAdmin(true);
+      clickCount.current = 0; // reset
+    }
+  }
+
+  async function handleDelete(id: string) {
+    if (!confirm("Are you sure you want to delete this testimony?")) return;
+    const result = await deleteTestimony(id);
+    if (!result.success) {
+      alert("Failed to delete testimony");
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -42,7 +60,12 @@ export function Testimonies({ initialTestimonies }: { initialTestimonies: Testim
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">Testimonies</h2>
+            <h2 
+              className="text-4xl md:text-6xl font-bold mb-4 select-none cursor-default"
+              onClick={handleTitleClick}
+            >
+              Testimonies
+            </h2>
             <p className="text-zinc-400 text-lg">Stories of grace, forgiveness, and redemption.</p>
           </motion.div>
 
@@ -73,9 +96,18 @@ export function Testimonies({ initialTestimonies }: { initialTestimonies: Testim
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800/50 flex flex-col justify-between"
+                className="bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800/50 flex flex-col justify-between relative group"
               >
-                <p className="text-zinc-300 text-lg mb-6 leading-relaxed italic">
+                {isAdmin && (
+                  <button
+                    onClick={() => handleDelete(testimony.id)}
+                    className="absolute top-4 right-4 p-2 bg-red-500/10 text-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-all hover:bg-red-500 hover:text-white z-10"
+                    title="Delete Testimony"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                )}
+                <p className={`text-zinc-300 text-lg mb-6 leading-relaxed italic ${isAdmin ? 'mt-2' : ''}`}>
                   "{testimony.content}"
                 </p>
                 <div>
