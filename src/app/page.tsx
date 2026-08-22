@@ -17,7 +17,7 @@ export default async function Home() {
       <Testimonies initialTestimonies={testimonies} />
       
       <footer className="py-8 text-center text-zinc-600 border-t border-zinc-900">
-        <p>© 2024 Redemption by Reflect. Ephesians 1:7.</p>
+        <p>© 2026 Redemption by Reflect. Ephesians 1:7.</p>
       </footer>
     </main>
   );
