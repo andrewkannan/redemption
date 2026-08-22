@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function IntroAnimation() {
   const [show, setShow] = useState(true);
@@ -29,9 +30,13 @@ export function IntroAnimation() {
             }}
             className="absolute inset-0 w-full h-full"
           >
-            <div 
-              className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/cinematic-hand-mobile.jpg')" }}
+            <Image 
+              src="/cinematic-hand-mobile.jpg"
+              alt="Hand of the Lord"
+              fill
+              priority
+              quality={90}
+              className="object-cover object-center"
             />
             {/* Dramatic Vignette / Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/90" />
@@ -48,12 +53,6 @@ export function IntroAnimation() {
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[10rem] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-300 to-zinc-600 mb-6 drop-shadow-[0_0_50px_rgba(255,255,255,0.6)]">
               Redemption
             </h1>
-            <motion.div
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: "100%", opacity: 1 }}
-              transition={{ delay: 3.5, duration: 1.5, ease: "circOut" }}
-              className="h-[2px] bg-white/80 shadow-[0_0_30px_rgba(255,255,255,1)]"
-            />
           </motion.div>
         </motion.div>
       )}
