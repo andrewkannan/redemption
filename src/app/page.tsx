@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Itinerary } from "@/components/sections/Itinerary";
 import { Camera } from "@/components/sections/Camera";
 import { Testimonies } from "@/components/sections/Testimonies";
+import { IntroAnimation } from "@/components/sections/IntroAnimation";
 import { getTestimonies } from "@/app/actions/testimonies";
 
 export const dynamic = "force-dynamic";
@@ -11,6 +12,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-black">
+      <IntroAnimation />
       <Hero />
       <Itinerary />
       <Camera />
