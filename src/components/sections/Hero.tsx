@@ -44,16 +44,12 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex items-center justify-center gap-4"
         >
           <div className="flex items-center gap-2 text-xl font-medium">
             <span className="text-white">September</span>
             <span className="text-primary-500 font-bold">2 - 4</span>
           </div>
-          <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/30" />
-          <Button className="rounded-full px-8 py-6 text-base font-semibold bg-white text-black hover:bg-gray-200">
-            Join the Experience
-          </Button>
         </motion.div>
       </motion.div>
 
