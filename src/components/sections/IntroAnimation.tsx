@@ -31,7 +31,7 @@ export function IntroAnimation() {
           >
             <div 
               className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/cinematic-hand.jpg')" }}
+              style={{ backgroundImage: "url('/cinematic-hand-mobile.jpg')" }}
             />
             {/* Dramatic Vignette / Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/90" />
@@ -43,9 +43,9 @@ export function IntroAnimation() {
             initial={{ opacity: 0, filter: "blur(20px)", scale: 0.9 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ delay: 2, duration: 2.5, ease: "easeOut" }}
-            className="relative z-30 text-center flex flex-col items-center"
+            className="relative z-30 text-center flex flex-col items-center px-4"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-[0.3em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-500 mb-6 ml-4 drop-shadow-[0_0_50px_rgba(255,255,255,0.6)]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[10rem] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-300 to-zinc-600 mb-6 drop-shadow-[0_0_50px_rgba(255,255,255,0.6)]">
               Redemption
             </h1>
             <motion.div
