@@ -4,36 +4,48 @@ import { motion } from "framer-motion";
 
 const days = [
   {
-    date: "Sept 2",
-    title: "The Gathering",
+    date: "Day 1 — 2 Sept",
+    title: "THE KICK-OFF 🚀",
     events: [
-      { time: "4:00 PM", desc: "Arrival & Registration" },
-      { time: "6:00 PM", desc: "Welcome Dinner & Icebreakers" },
-      { time: "8:00 PM", desc: "Opening Session: The Blood" },
-      { time: "10:00 PM", desc: "Campfire & Late Night Worship" },
+      { time: "7:30 AM", desc: "📍 Gathering at Menara Zurich" },
+      { time: "8:30 AM", desc: "🚌 We’re Off! — Departure by Bus" },
+      { time: "2:30 PM", desc: "🏕️ We’re Here! — Arrival at Camp Venue" },
+      { time: "2:30 PM", desc: "🎉 Welcome & Camp Kick-Off" },
+      { time: "3:00 PM", desc: "👋 Icebreaker" },
+      { time: "4:00 PM", desc: "🏠 Room Check-In & Squad Up" },
+      { time: "5:00 PM", desc: "✨ Chill Time" },
+      { time: "6:00 PM", desc: "🍽️ Dinner" },
+      { time: "7:00 PM", desc: "🔥 Session 1" },
+      { time: "9:30 PM", desc: "🍪 Supper & Late-Night Vibes" },
+      { time: "10:30 PM", desc: "😴 Recharge & Lights Out" },
     ]
   },
   {
-    date: "Sept 3",
-    title: "The Forgiveness",
+    date: "Day 2 — 3 Sept",
+    title: "THE MAIN CHARACTER DAY 🔥",
     events: [
-      { time: "8:00 AM", desc: "Breakfast" },
-      { time: "9:30 AM", desc: "Morning Devotion & Group Prayer" },
-      { time: "11:00 AM", desc: "Workshop: Riches of His Grace" },
-      { time: "1:00 PM", desc: "Lunch" },
-      { time: "3:00 PM", desc: "Team Games & Outdoor Activities" },
-      { time: "7:00 PM", desc: "Dinner" },
-      { time: "8:30 PM", desc: "Evening Revival Session" },
+      { time: "7:30 AM", desc: "🙏 Devotion — Start the Day Right" },
+      { time: "8:00 AM", desc: "🍳 Breakfast" },
+      { time: "9:00 AM", desc: "🔥 Session 2" },
+      { time: "12:00 PM", desc: "🍽️ Lunch" },
+      { time: "1:00 PM", desc: "👕 Outfit Change — Get Ready!" },
+      { time: "1:30 PM", desc: "🎮 GAME ON! — Team Games & Activities" },
+      { time: "5:00 PM", desc: "✨ Chill Time" },
+      { time: "6:30 PM", desc: "🍽️ Dinner" },
+      { time: "7:30 PM", desc: "🕊️ ENCOUNTER NIGHT" },
+      { time: "9:30 PM", desc: "🔥 Campfire Vibes" },
+      { time: "After", desc: "😴 Recharge & Lights Out" },
     ]
   },
   {
-    date: "Sept 4",
-    title: "The Commission",
+    date: "Day 3 — 4 Sept",
+    title: "THE SEND-OFF ✨",
     events: [
-      { time: "8:30 AM", desc: "Breakfast" },
-      { time: "10:00 AM", desc: "Closing Session & Testimonies" },
-      { time: "12:00 PM", desc: "Farewell Lunch" },
-      { time: "2:00 PM", desc: "Departure" },
+      { time: "7:30 AM", desc: "🙏💃 Devotion + Zumba" },
+      { time: "8:00 AM", desc: "🍳 Breakfast" },
+      { time: "9:00 AM", desc: "✨ Impartation" },
+      { time: "12:00 PM", desc: "🍽️ Lunch" },
+      { time: "1:00 PM", desc: "🚌 Pack Up & Head Home" },
     ]
   }
 ];
