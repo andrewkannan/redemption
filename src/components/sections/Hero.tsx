@@ -37,7 +37,7 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 1 }}
           className="text-zinc-300 uppercase text-xs md:text-sm font-bold tracking-[0.3em] mb-4 md:mb-6"
         >
-          ✦ YOUTH CAMP 2026 ✦
+          REFLECT PRESENTS
         </motion.h2>
 
         {/* REDEMPTION Text Reveal */}
