@@ -106,10 +106,7 @@ export function Testimonies({ initialTestimonies }: { initialTestimonies: Testim
                   </button>
                 )}
                 
-                <div className="mb-6 border-b border-zinc-800/80 pb-6 flex-1 relative z-10">
-                  <span className="text-primary-500 font-mono tracking-[0.2em] uppercase text-[10px] mb-4 block group-hover:tracking-[0.25em] transition-all duration-300">
-                    {testimony.tag}
-                  </span>
+                <div className="mb-6 border-b border-zinc-800/80 pb-6 flex-1 relative z-10 pt-4">
                   <p className={`text-zinc-300 font-light text-sm tracking-wide leading-relaxed italic group-hover:text-white transition-colors duration-300 ${isAdmin ? 'mt-2' : ''}`}>
                     "{testimony.content}"
                   </p>
@@ -157,21 +154,6 @@ export function Testimonies({ initialTestimonies }: { initialTestimonies: Testim
                     required
                     disabled={isSubmitting}
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-mono tracking-widest uppercase text-zinc-500 mb-2">Topic</label>
-                  <select 
-                    name="tag"
-                    className="w-full bg-zinc-950 border-b border-zinc-800 py-2 text-white focus:outline-none focus:border-primary-500 transition-colors font-light text-sm appearance-none"
-                    required
-                    disabled={isSubmitting}
-                  >
-                    <option value="Worship">Worship</option>
-                    <option value="Freedom">Freedom</option>
-                    <option value="Community">Community</option>
-                    <option value="Revelation">Revelation</option>
-                    <option value="Healing">Healing</option>
-                  </select>
                 </div>
                 <div>
                   <label className="block text-xs font-mono tracking-widest uppercase text-zinc-500 mb-2">Your Story</label>

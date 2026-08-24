@@ -18,9 +18,10 @@ export async function getTestimonies() {
 export async function createTestimony(formData: FormData) {
   const name = formData.get("name") as string;
   const content = formData.get("content") as string;
-  const tag = formData.get("tag") as string;
+  // Hardcode tag to prevent breaking the database schema, since it's removed from UI
+  const tag = "Story";
 
-  if (!name || !content || !tag) {
+  if (!name || !content) {
     throw new Error("Missing required fields");
   }
 
