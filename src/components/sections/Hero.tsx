@@ -45,24 +45,24 @@ export function Hero() {
           initial={{ opacity: 0, filter: "blur(20px)", scale: 0.9 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ delay: 1.5, duration: 2.5, ease: "easeOut" }}
-          className="flex flex-col items-center justify-center mb-8 md:mb-12 w-full mix-blend-screen relative z-10"
+          className="flex flex-col items-center justify-center -mt-8 -mb-12 md:-mt-16 md:-mb-24 w-full mix-blend-screen relative z-10"
         >
           {/* Cinematic Glow Layer */}
           <div 
-            className="absolute w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-80 blur-3xl pointer-events-none"
+            className="absolute w-80 h-80 md:w-[32rem] md:h-[32rem] lg:w-[40rem] lg:h-[40rem] opacity-80 blur-3xl pointer-events-none"
             style={{ filter: "contrast(200%) invert(1)" }}
           >
             <Image 
               src="/logo.jpg"
               alt="Glow"
               fill
-              className="object-contain"
+              className="object-contain scale-125 md:scale-110"
             />
           </div>
 
           {/* Sharp Sharp Layer */}
           <div 
-            className="relative w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] opacity-100"
+            className="relative w-80 h-80 md:w-[32rem] md:h-[32rem] lg:w-[40rem] lg:h-[40rem] opacity-100"
             style={{ filter: "contrast(200%) invert(1)" }}
           >
             <Image 
@@ -71,7 +71,7 @@ export function Hero() {
               fill
               priority
               quality={100}
-              className="object-contain"
+              className="object-contain scale-125 md:scale-110"
             />
           </div>
         </motion.div>
