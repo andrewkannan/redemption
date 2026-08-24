@@ -46,7 +46,7 @@ export function Camera() {
             {/* Continuous Scanner line animation */}
             <motion.div 
               animate={{ top: ["0%", "100%"] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
               className="absolute left-0 w-full h-[1px] bg-primary-500/40 shadow-[0_0_20px_rgba(255,255,255,0.4)] opacity-50 z-0 pointer-events-none"
             />
             
