@@ -80,23 +80,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5 }}
-          className="border border-zinc-800/80 bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-10 mb-12 mx-4 max-w-3xl w-full relative group overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-          <p className="text-lg md:text-2xl text-zinc-300 italic font-light leading-relaxed mb-6 relative z-10 text-center px-4">
-            "In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God's grace."
-          </p>
-          <div className="flex items-center justify-center gap-4 relative z-10">
-            <div className="h-[1px] w-8 bg-primary-500/50" />
-            <p className="text-zinc-500 font-mono tracking-[0.2em] uppercase text-xs md:text-sm">Ephesians 1:7</p>
-          </div>
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 3 }}
-          className="flex flex-col items-center justify-center gap-4 md:gap-6 w-full max-w-3xl mx-4"
+          className="flex flex-col items-center justify-center gap-4 md:gap-6 w-full max-w-3xl mx-4 mb-12"
         >
           <div className="flex items-center gap-3 text-xl md:text-3xl font-light tracking-[0.25em] uppercase text-white/90">
             2 <span className="text-primary-500/60 font-mono">—</span> 4 SEPTEMBER 2026
@@ -109,6 +93,22 @@ export function Hero() {
             <span>Encounter</span>
             <span className="text-primary-500/50 hidden md:inline">•</span>
             <span>Grow</span>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 3 }}
+          className="border border-zinc-800/80 bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-10 mx-4 max-w-3xl w-full relative group overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <p className="text-lg md:text-2xl text-zinc-300 italic font-light leading-relaxed mb-6 relative z-10 text-center px-4">
+            "In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God's grace."
+          </p>
+          <div className="flex items-center justify-center gap-4 relative z-10">
+            <div className="h-[1px] w-8 bg-primary-500/50" />
+            <p className="text-zinc-500 font-mono tracking-[0.2em] uppercase text-xs md:text-sm">Ephesians 1:7</p>
           </div>
         </motion.div>
       </div>
