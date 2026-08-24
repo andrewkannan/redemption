@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Redemption",
-  description: "Youth Camp 2026 - Redemption by Reflect",
+  title: "Redemption | 2 — 4 SEPTEMBER 2026",
+  description: '"In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God\'s grace." — Ephesians 1:7',
+  openGraph: {
+    title: "Redemption | 2 — 4 SEPTEMBER 2026",
+    description: '"In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God\'s grace." — Ephesians 1:7',
+    siteName: "Reflect Presents",
+  }
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
