@@ -45,9 +45,9 @@ export function Camera() {
           >
             {/* Continuous Scanner line animation */}
             <motion.div 
-              animate={{ y: ["-100%", "800%"] }}
+              animate={{ top: ["0%", "100%"] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="absolute top-0 left-0 w-full h-[1px] bg-primary-500/30 shadow-[0_0_15px_rgba(255,255,255,0.3)] opacity-50"
+              className="absolute left-0 w-full h-[1px] bg-primary-500/40 shadow-[0_0_20px_rgba(255,255,255,0.4)] opacity-50 z-0 pointer-events-none"
             />
             
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-primary-500/30 flex items-center justify-center mb-6 md:mb-8 transition-all duration-500 text-primary-400 bg-primary-500/5 backdrop-blur-sm relative z-10 shadow-[0_0_30px_rgba(255,255,255,0.05)] group-hover:scale-110 group-hover:bg-primary-500/10">
