@@ -45,9 +45,26 @@ export function Hero() {
           initial={{ opacity: 0, filter: "blur(20px)", scale: 0.9 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ delay: 1.5, duration: 2.5, ease: "easeOut" }}
-          className="flex flex-col items-center mb-8 md:mb-12 w-full"
+          className="flex flex-col items-center justify-center mb-8 md:mb-12 w-full mix-blend-screen relative z-10"
         >
-          <div className="relative w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] invert mix-blend-screen opacity-90 drop-shadow-[0_0_50px_rgba(255,255,255,0.6)]">
+          {/* Cinematic Glow Layer */}
+          <div 
+            className="absolute w-72 h-72 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] opacity-80 blur-3xl pointer-events-none"
+            style={{ filter: "contrast(200%) invert(1)" }}
+          >
+            <Image 
+              src="/logo.jpg"
+              alt="Glow"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Sharp Sharp Layer */}
+          <div 
+            className="relative w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] opacity-100"
+            style={{ filter: "contrast(200%) invert(1)" }}
+          >
             <Image 
               src="/logo.jpg"
               alt="Redemption Logo"
