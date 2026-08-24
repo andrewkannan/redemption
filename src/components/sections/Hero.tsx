@@ -31,21 +31,12 @@ export function Hero() {
       </motion.div>
 
       <div className="relative z-10 text-center max-w-4xl w-full flex flex-col items-center mt-12">
-        <motion.h2 
-          initial={{ opacity: 0, letterSpacing: "10px", y: 20 }}
-          animate={{ opacity: 1, letterSpacing: "4px", y: 0 }}
-          transition={{ duration: 1.2, delay: 1 }}
-          className="text-zinc-300 uppercase text-xs md:text-sm font-bold tracking-[0.3em] mb-4 md:mb-6"
-        >
-          REFLECT PRESENTS
-        </motion.h2>
-
         {/* REDEMPTION Logo Reveal */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(20px)", scale: 0.9 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ delay: 1.5, duration: 2.5, ease: "easeOut" }}
-          className="flex flex-col items-center justify-center -mt-8 -mb-8 md:-mt-16 md:-mb-16 w-full mix-blend-screen relative z-10"
+          className="flex flex-col items-center justify-center -mb-8 md:-mb-12 w-full mix-blend-screen relative z-10"
         >
           {/* Cinematic Glow Layer */}
           <div 
@@ -75,6 +66,15 @@ export function Hero() {
             />
           </div>
         </motion.div>
+
+        <motion.h2 
+          initial={{ opacity: 0, letterSpacing: "10px", y: 20 }}
+          animate={{ opacity: 1, letterSpacing: "4px", y: 0 }}
+          transition={{ duration: 1.2, delay: 2 }}
+          className="text-zinc-400 uppercase text-xs md:text-sm font-bold tracking-[0.3em] mb-12 md:mb-16 relative z-10"
+        >
+          PRESENTED BY REFLECT
+        </motion.h2>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
