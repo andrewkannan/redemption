@@ -75,7 +75,7 @@ export function Hero() {
           className="flex flex-col items-center justify-center gap-4 md:gap-6 w-full max-w-3xl mx-4"
         >
           <div className="flex items-center gap-3 text-xl md:text-3xl font-light tracking-[0.25em] uppercase text-white/90">
-            2 <span className="text-primary-500/60 font-mono">—</span> 4 SEPTEMBER
+            2 <span className="text-primary-500/60 font-mono">—</span> 4 SEPTEMBER 2026
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] md:text-xs tracking-[0.4em] text-zinc-500 uppercase">
             <span>Gather</span>
