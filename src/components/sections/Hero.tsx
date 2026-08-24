@@ -53,28 +53,38 @@ export function Hero() {
         </motion.div>
         
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5 }}
-          className="bg-black/30 border border-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 mb-8 mx-4 max-w-2xl w-full shadow-2xl"
+          className="border border-zinc-800/80 bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-10 mb-12 mx-4 max-w-3xl w-full relative group overflow-hidden"
         >
-          <p className="text-lg md:text-xl text-white/90 italic font-light mb-4 drop-shadow-md">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <p className="text-lg md:text-2xl text-zinc-300 italic font-light leading-relaxed mb-6 relative z-10 text-center px-4">
             "In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God's grace."
           </p>
-          <p className="text-zinc-400 font-semibold tracking-wider text-sm md:text-base">— Ephesians 1:7</p>
+          <div className="flex items-center justify-center gap-4 relative z-10">
+            <div className="h-[1px] w-8 bg-primary-500/50" />
+            <p className="text-zinc-500 font-mono tracking-[0.2em] uppercase text-xs md:text-sm">Ephesians 1:7</p>
+          </div>
         </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 3 }}
-          className="flex flex-col items-center justify-center gap-2 md:gap-4"
+          className="flex flex-col items-center justify-center gap-4 md:gap-6 w-full max-w-3xl mx-4"
         >
-          <div className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-widest uppercase text-white/90">
-            2 — 4 SEPTEMBER
+          <div className="flex items-center gap-3 text-xl md:text-3xl font-light tracking-[0.25em] uppercase text-white/90">
+            2 <span className="text-primary-500/60 font-mono">—</span> 4 SEPTEMBER
           </div>
-          <div className="text-sm md:text-base tracking-[0.2em] text-zinc-400 uppercase mt-2 font-medium text-center px-4">
-            Gather • Connect • Encounter • Grow
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] md:text-xs tracking-[0.4em] text-zinc-500 uppercase">
+            <span>Gather</span>
+            <span className="text-primary-500/50 hidden md:inline">•</span>
+            <span>Connect</span>
+            <span className="text-primary-500/50 hidden md:inline">•</span>
+            <span>Encounter</span>
+            <span className="text-primary-500/50 hidden md:inline">•</span>
+            <span>Grow</span>
           </div>
         </motion.div>
       </div>
