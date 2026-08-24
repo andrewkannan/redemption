@@ -45,7 +45,7 @@ export function Hero() {
           initial={{ opacity: 0, filter: "blur(20px)", scale: 0.9 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ delay: 1.5, duration: 2.5, ease: "easeOut" }}
-          className="flex flex-col items-center justify-center -mt-8 -mb-12 md:-mt-16 md:-mb-24 w-full mix-blend-screen relative z-10"
+          className="flex flex-col items-center justify-center -mt-8 -mb-8 md:-mt-16 md:-mb-16 w-full mix-blend-screen relative z-10"
         >
           {/* Cinematic Glow Layer */}
           <div 
