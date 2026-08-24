@@ -23,21 +23,42 @@ export function Camera() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full"
+          className="w-full relative p-4 md:p-8"
         >
+          {/* Viewfinder corner brackets */}
+          <div className="absolute top-0 left-0 w-8 h-8 md:w-16 md:h-16 border-t border-l border-zinc-700 opacity-50" />
+          <div className="absolute top-0 right-0 w-8 h-8 md:w-16 md:h-16 border-t border-r border-zinc-700 opacity-50" />
+          <div className="absolute bottom-0 left-0 w-8 h-8 md:w-16 md:h-16 border-b border-l border-zinc-700 opacity-50" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 md:w-16 md:h-16 border-b border-r border-zinc-700 opacity-50" />
+          
+          {/* Center crosshair */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 opacity-20 pointer-events-none hidden md:block">
+             <div className="absolute top-1/2 left-0 w-full h-[1px] bg-zinc-400" />
+             <div className="absolute top-0 left-1/2 w-[1px] h-full bg-zinc-400" />
+          </div>
+
           <a 
             href="https://captured.thisiscccbilingual.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex flex-col items-center justify-center p-12 border border-zinc-800/80 hover:border-primary-500/50 transition-colors bg-zinc-900/10"
+            className="group flex flex-col items-center justify-center p-16 md:p-24 border border-zinc-800/50 hover:border-primary-500/30 transition-all duration-700 bg-zinc-900/10 relative overflow-hidden"
           >
-            <div className="w-16 h-16 rounded-full border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-primary-500/50 group-hover:text-primary-400 transition-colors text-zinc-400">
-              <CameraIcon className="w-6 h-6" strokeWidth={1.5} />
+            {/* Scanner line animation on hover */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-primary-500/50 shadow-[0_0_15px_rgba(255,255,255,0.5)] -translate-y-[100%] group-hover:translate-y-[800%] transition-transform duration-[3s] ease-linear opacity-0 group-hover:opacity-100" />
+            
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-zinc-800 flex items-center justify-center mb-6 md:mb-8 group-hover:border-primary-500/50 group-hover:scale-110 transition-all duration-500 text-zinc-500 group-hover:text-primary-400 bg-black/50 backdrop-blur-sm relative z-10">
+              <CameraIcon className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />
             </div>
             
-            <div className="flex items-center gap-4 text-white text-sm md:text-lg font-light tracking-[0.2em] uppercase">
+            <div className="flex items-center gap-4 text-white text-xs md:text-sm font-light tracking-[0.2em] md:tracking-[0.3em] uppercase relative z-10">
               <span>Open Camera App</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform text-primary-500" strokeWidth={1.5} />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-3 transition-transform duration-300 text-primary-500" strokeWidth={1.5} />
+            </div>
+            
+            {/* REC indicator */}
+            <div className="absolute top-6 right-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-red-500 font-mono text-[10px] tracking-widest uppercase">REC</span>
             </div>
           </a>
         </motion.div>

@@ -89,28 +89,33 @@ export function Testimonies({ initialTestimonies }: { initialTestimonies: Testim
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex flex-col relative group"
+                className="flex flex-col relative group overflow-hidden p-2"
               >
+                {/* Decorative Quote Mark */}
+                <div className="absolute -top-10 -left-6 text-[12rem] font-serif text-zinc-800/10 leading-none select-none pointer-events-none group-hover:text-primary-500/5 transition-colors duration-500">
+                  "
+                </div>
+
                 {isAdmin && (
                   <button
                     onClick={() => handleDelete(testimony.id)}
-                    className="absolute -top-4 -right-4 p-2 text-red-500 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all hover:text-red-400 z-10"
+                    className="absolute -top-2 -right-2 p-2 text-red-500 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all hover:text-red-400 z-20"
                     title="Delete Testimony"
                   >
                     <Trash2 className="w-4 h-4" strokeWidth={1.5} />
                   </button>
                 )}
                 
-                <div className="mb-6 border-b border-zinc-800/80 pb-6 flex-1">
-                  <span className="text-primary-500 font-mono tracking-[0.2em] uppercase text-[10px] mb-4 block">
+                <div className="mb-6 border-b border-zinc-800/80 pb-6 flex-1 relative z-10">
+                  <span className="text-primary-500 font-mono tracking-[0.2em] uppercase text-[10px] mb-4 block group-hover:tracking-[0.25em] transition-all duration-300">
                     {testimony.tag}
                   </span>
-                  <p className={`text-zinc-300 font-light text-sm tracking-wide leading-relaxed italic ${isAdmin ? 'mt-2' : ''}`}>
+                  <p className={`text-zinc-300 font-light text-sm tracking-wide leading-relaxed italic group-hover:text-white transition-colors duration-300 ${isAdmin ? 'mt-2' : ''}`}>
                     "{testimony.content}"
                   </p>
                 </div>
                 
-                <p className="text-white font-light tracking-widest uppercase text-xs">{testimony.name}</p>
+                <p className="text-white font-light tracking-widest uppercase text-xs relative z-10 group-hover:translate-x-1 transition-transform duration-300">{testimony.name}</p>
               </motion.div>
             ))
           )}
