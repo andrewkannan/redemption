@@ -14,7 +14,7 @@ export function Camera() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-light tracking-[0.2em] uppercase mb-4 text-zinc-100">Capture the Moment</h2>
+          <h2 className="text-3xl md:text-5xl font-light tracking-[0.2em] uppercase mb-4 text-zinc-100">Capture the Redemption</h2>
           <p className="text-zinc-500 text-sm tracking-widest uppercase">Document your journey and share the memories.</p>
         </motion.div>
 
