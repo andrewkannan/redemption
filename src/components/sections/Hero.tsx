@@ -10,7 +10,7 @@ export function Hero() {
       {/* Cinematic Background Image with Ken Burns Effect */}
       <motion.div
         initial={{ scale: 1, opacity: 0 }}
-        animate={{ scale: 1.05, opacity: 0.7 }}
+        animate={{ scale: 1.05, opacity: 1 }}
         transition={{ 
           scale: { duration: 15, ease: "linear" },
           opacity: { duration: 2.5, ease: "easeInOut" }
@@ -22,11 +22,9 @@ export function Hero() {
           alt="Ethereal Dove Silhouette"
           fill
           priority
-          quality={90}
-          className="object-cover object-center"
+          quality={100}
+          className="object-cover object-center brightness-125 md:brightness-150 opacity-90"
         />
-        {/* Subtle Vignette to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       </motion.div>
 
       <div className="relative z-10 text-center max-w-4xl w-full flex flex-col items-center mt-12">
