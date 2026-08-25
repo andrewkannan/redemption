@@ -9,21 +9,20 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white px-4 md:px-6">
       {/* Cinematic Background Image with Ken Burns Effect */}
       <motion.div
-        initial={{ scale: 1, opacity: 0 }}
-        animate={{ scale: 1.05, opacity: 1 }}
+        initial={{ scale: 1, opacity: 1 }}
+        animate={{ scale: 1.05 }}
         transition={{ 
-          scale: { duration: 15, ease: "linear" },
-          opacity: { duration: 2.5, ease: "easeInOut" }
+          scale: { duration: 15, ease: "linear" }
         }}
         className="absolute inset-0 w-full h-full -z-20"
       >
         <Image 
-          src="/cinematic-dove.jpg"
+          src="/dove-bg-v2.jpg"
           alt="Ethereal Dove Silhouette"
           fill
           priority
-          quality={100}
-          className="object-cover object-center brightness-125 md:brightness-150 opacity-90"
+          unoptimized
+          className="object-cover object-center brightness-125 md:brightness-150"
         />
       </motion.div>
 
