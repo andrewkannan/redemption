@@ -10,16 +10,16 @@ export function Hero() {
       {/* Cinematic Background Image with Ken Burns Effect */}
       <motion.div
         initial={{ scale: 1, opacity: 0 }}
-        animate={{ scale: 1.05, opacity: 1 }}
+        animate={{ scale: 1.05, opacity: 0.35 }}
         transition={{ 
-          scale: { duration: 8, ease: "linear" },
-          opacity: { duration: 1.5, ease: "easeInOut" }
+          scale: { duration: 15, ease: "linear" },
+          opacity: { duration: 2.5, ease: "easeInOut" }
         }}
         className="absolute inset-0 w-full h-full -z-20"
       >
         <Image 
-          src="/cinematic-hand-mobile.jpg"
-          alt="Hand of the Lord"
+          src="/cinematic-dove.jpg"
+          alt="Ethereal Dove Silhouette"
           fill
           priority
           quality={90}
