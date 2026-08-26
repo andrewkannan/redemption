@@ -23,8 +23,8 @@ const days = [
       { time: "07:30 AM", desc: "Heart Check" },
       { time: "08:00 AM", desc: "Morning Fuel" },
       { time: "09:00 AM", desc: "Chapter Two" },
-      { time: "12:00 PM", desc: "Afternoon Fuel" },
-      { time: "01:00 PM", desc: "Fit Check" },
+      { time: "12:00 PM", desc: "Fit Check" },
+      { time: "12:30 PM", desc: "Afternoon Fuel" },
       { time: "01:30 PM", desc: "Battle Mode" },
       { time: "05:00 PM", desc: "Your Time to Vibe" },
       { time: "06:30 PM", desc: "Night Fuel" },
@@ -40,8 +40,8 @@ const days = [
       { time: "07:30 AM", desc: "Heart Check" },
       { time: "08:00 AM", desc: "Morning Fuel" },
       { time: "09:00 AM", desc: "Chapter Three" },
-      { time: "12:00 PM", desc: "Afternoon Fuel" },
-      { time: "01:00 PM", desc: "Bags Up" },
+      { time: "12:30 PM", desc: "Afternoon Fuel" },
+      { time: "01:30 PM", desc: "Bags Up" },
     ]
   }
 ];
