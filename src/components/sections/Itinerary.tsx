@@ -10,10 +10,9 @@ const days = [
       { time: "02:30 PM", desc: "Touchdown" },
       { time: "03:00 PM", desc: "The Camp Kickoff" },
       { time: "05:00 PM", desc: "Your Time to Vibe" },
-      { time: "06:00 PM", desc: "Night Fuel" },
-      { time: "07:00 PM", desc: "Chapter One" },
-      { time: "09:30 PM", desc: "One Last Bite" },
-      { time: "10:30 PM", desc: "Recharge" },
+      { time: "06:30 PM", desc: "Night Fuel" },
+      { time: "07:30 PM", desc: "Chapter One" },
+      { time: "09:30 PM", desc: "Recharge" },
     ]
   },
   {
